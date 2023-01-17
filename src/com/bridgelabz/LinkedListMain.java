@@ -18,7 +18,7 @@ public class LinkedListMain {
             System.out.println("POP First Successfully done.Pop data : " + popData);
         Linkedlist1.display();
 
-        System.out.println("*******************\n");
+        System.out.println("******************************\n");
 
         LinkedList<Integer> Linkedlist2 = new LinkedList<>();
         Linkedlist2.append(56);
@@ -34,5 +34,24 @@ public class LinkedListMain {
         else
             System.out.println("POP Last Successfully done.Pop data : " + popLastElement);
         Linkedlist2.display();
+
+        System.out.println("******************************\n");
+
+        LinkedList<Integer> Linkedlist3 = new LinkedList<>();
+        Linkedlist3.search(45);
+
+        Linkedlist3.append(56);
+        Linkedlist3.append(30);
+        Linkedlist3.append(45);
+        Linkedlist3.append(70);
+        Linkedlist3.display();
+
+        Node<Integer> searchElement = Linkedlist3.search(30);
+        if (searchElement == null)
+            System.out.println("Element not Found.");
+        else {
+            System.out.println("Element Found.");
+            System.out.println(searchElement);
+        }
     }
 }
