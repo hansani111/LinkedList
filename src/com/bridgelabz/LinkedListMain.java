@@ -52,6 +52,17 @@ public class LinkedListMain {
         else {
             System.out.println("Element Found.");
             System.out.println(searchElement);
+
+            System.out.println("******************************\n");
+            LinkedList<Integer> Linkedlist4 = new LinkedList<>();
+
+            Linkedlist4.append(56);
+            Linkedlist4.append(30);
+            Linkedlist4.append(70);
+            Linkedlist4.display();
+
+            Linkedlist4.popAfter(30, 40);
+            Linkedlist4.display();
         }
     }
 }
