@@ -77,4 +77,25 @@ public class LinkedList<E> {
         }
         return null;
     }
+
+    /* Insert node in the middle of LinkedList */
+    void popAfter(E previous, E data) {
+        if (head == null) {
+            System.out.println("Node not found!!!");
+            return;
+        }
+        Node<E> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(previous)) {
+                Node<E> newNode = new Node(data);
+                Node<E> nextNode = temp.next;
+                temp.next = newNode;
+                newNode.next = nextNode;
+
+                System.out.println("Node added successfully");
+                return;
+            }
+            temp = temp.next;
+        }
+    }
 }
