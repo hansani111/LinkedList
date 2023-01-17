@@ -12,9 +12,9 @@ public class LinkedListMain {
         Linkedlist1.display();
 
         Integer popData = Linkedlist1.pop();
-        if(popData == null) {
+        if (popData == null) {
             System.out.println("Empty linked list.");
-        }else
+        } else
             System.out.println("POP First Successfully done.Pop data : " + popData);
         Linkedlist1.display();
 
@@ -26,6 +26,13 @@ public class LinkedListMain {
         Linkedlist2.append(45);
         Linkedlist2.append(70);
 
+        Linkedlist2.display();
+
+        Integer popLastElement = Linkedlist2.popLast();
+        if (popLastElement == null)
+            System.out.println("Empty linked list.");
+        else
+            System.out.println("POP Last Successfully done.Pop data : " + popLastElement);
         Linkedlist2.display();
     }
 }
