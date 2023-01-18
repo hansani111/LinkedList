@@ -39,6 +39,7 @@ public class LinkedList<E> {
     }
 
     /* delete the 1st node(head) of a linkedlist */
+    /* change the head position to the next node */
     E pop() {
         if (head == null) {
             return null;
@@ -86,7 +87,7 @@ public class LinkedList<E> {
         }
         Node<E> temp = head;
         while (temp != null) {
-            if (temp.data.equals(previous)) {
+            if ((temp.data).equals(previous)) {
                 Node<E> newNode = new Node(data);
                 Node<E> nextNode = temp.next;
                 temp.next = newNode;
@@ -97,5 +98,38 @@ public class LinkedList<E> {
             }
             temp = temp.next;
         }
+    }
+
+    /* Get the size of linkedList*/
+    int size() {
+        int count = 0;
+        if (head == null)
+            return count;
+        Node<E> temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Size of the linked list is : " + count);
+        return count;
+    }
+
+    /* Delete a node  */
+    void pop(E data) {
+        if (head == null) {
+            System.out.println("Empty LinkedList");
+            return;
+        }
+
+        Node<E> temp = head;
+        while (temp != null) {
+            if ((temp.next.data).equals(data)) {
+                temp.next = temp.next.next;
+                System.out.println(data + " successfully deleted.");
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.println("Not Found!!!");
     }
 }

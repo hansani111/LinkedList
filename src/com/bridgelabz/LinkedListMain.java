@@ -54,14 +54,22 @@ public class LinkedListMain {
             System.out.println(searchElement);
 
             System.out.println("******************************\n");
-            LinkedList<Integer> Linkedlist4 = new LinkedList<>();
 
+            System.out.println("Insert Node Between Node");
+            LinkedList<Integer> Linkedlist4 = new LinkedList<>();
             Linkedlist4.append(56);
             Linkedlist4.append(30);
             Linkedlist4.append(70);
             Linkedlist4.display();
 
             Linkedlist4.popAfter(30, 40);
+            Linkedlist4.display();
+
+            System.out.println("******************************\n");
+
+            System.out.println("Delete Node Between Node");
+            Linkedlist4.pop(40);
+            Linkedlist4.size();
             Linkedlist4.display();
         }
     }
