@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.linkedlist;
 
 public class LinkedList<E> {
     private Node<E> head;
@@ -38,7 +38,7 @@ public class LinkedList<E> {
         System.out.println();
     }
 
-    /* delete the 1st node(head) of a linkedlist */
+    /* delete the 1st node(head) of a linked list */
     /* change the head position to the next node */
     E pop() {
         if (head == null) {
@@ -51,6 +51,7 @@ public class LinkedList<E> {
     }
 
     /* delete the last node(tail) of a linked list */
+    /* change the tail position to the previous node */
     E popLast() {
         if (head == null)
             return null;
@@ -72,15 +73,16 @@ public class LinkedList<E> {
 
         Node<E> temp = head;
         while (temp != null) {
-            if (temp.data.equals(value))
+            if ((temp.data).equals(value))
                 return temp;
             temp = temp.next;
         }
         return null;
     }
 
+
     /* Insert node in the middle of LinkedList */
-    void popAfter(E previous, E data) {
+    void insertAfter(E previous, E data) {
         if (head == null) {
             System.out.println("Node not found!!!");
             return;
@@ -114,13 +116,13 @@ public class LinkedList<E> {
         return count;
     }
 
-    /* Delete a node  */
-    void pop(E data) {
+
+    /* delete node in the middle of LinkedList */
+    void deleteAfter(E data) {
         if (head == null) {
             System.out.println("Empty LinkedList");
             return;
         }
-
         Node<E> temp = head;
         while (temp != null) {
             if ((temp.next.data).equals(data)) {
